@@ -36,7 +36,7 @@ public class Main {
         House house4 = new House(
                 145,
                 "Продам дом",
-                108,"Заречная 12",
+                108, "Заречная 12",
                 "Кировский",
                 "+792-134-86-58",
                 1_879_125);
@@ -47,13 +47,8 @@ public class Main {
         housesCatalog.addHouse(house2);
         housesCatalog.addHouse(house3);
         housesCatalog.addHouse(house4);
-        housesCatalog.sortHouseWishMinMax(1_000_000,2_000_000);
+        housesCatalog.sortHouseWishMinMax(1_000_000, 2_000_000);
         System.out.println();
-        housesCatalog.searchByDistrict("СОВЕТСКИЙ", "кировский","Вахитовский");
-//       HouseService houseService = new HouseService();
-//        houseService.searchByDistrict("кировский","Советский");
-
-
-
-
-    }}
+        housesCatalog.searchByDistrict("СОВЕТСКИЙ", "кировский", "Вахитовский");
+    }
+}

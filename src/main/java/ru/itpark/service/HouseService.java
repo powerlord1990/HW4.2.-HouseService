@@ -38,11 +38,6 @@ public class HouseService {
     }
 
 
-
-
-
-
-
     public void setHouses(List<House> houses) {
         this.houses = houses;
     }
