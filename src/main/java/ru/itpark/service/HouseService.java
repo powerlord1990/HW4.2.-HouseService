@@ -28,7 +28,7 @@ public class HouseService {
         List<House> result = new ArrayList<>();
         for (House house : houses) {
             for (String district : districts) {
-                if (house.getDistrict().toUpperCase().equals(district.toUpperCase())) {
+                if(house.getDistrict().equalsIgnoreCase(district)) {
                     System.out.println(house.toString());
 
                 }
