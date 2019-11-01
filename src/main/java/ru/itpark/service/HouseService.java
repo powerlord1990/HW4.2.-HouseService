@@ -38,10 +38,6 @@ public class HouseService {
     }
 
 
-    public void setHouses(List<House> houses) {
-        this.houses = houses;
-    }
-
     public void addHouse(House house) {
         houses.add(house);
     }
