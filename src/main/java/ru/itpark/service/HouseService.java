@@ -11,8 +11,9 @@ public class HouseService {
 
     private List<House> sortWishPrice() {
         List<House> houseList = houses;
-        houseList.sort(Comparator.comparing(House::getPrice));
-        return houseList;
+        List<House> houseNew =new ArrayList<>(houseList);
+        houseNew.sort(Comparator.comparing(House::getPrice));
+        return houseNew;
     }
 
     public void sortHouseWishMinMax(int min, int max) {
