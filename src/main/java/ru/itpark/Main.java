@@ -9,7 +9,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<House> ob = new ArrayList<>();
+
         House house1 = new House(
                 115,
                 "Одноэтажный дом",
