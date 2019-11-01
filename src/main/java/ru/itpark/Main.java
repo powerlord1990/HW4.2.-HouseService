@@ -3,9 +3,13 @@ package ru.itpark;
 import ru.itpark.model.House;
 import ru.itpark.service.HouseService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
+        List<House> ob = new ArrayList<>();
         House house1 = new House(
                 115,
                 "Одноэтажный дом",
@@ -47,8 +51,8 @@ public class Main {
         housesCatalog.addHouse(house2);
         housesCatalog.addHouse(house3);
         housesCatalog.addHouse(house4);
-        housesCatalog.sortHouseWishMinMax(1_000_000, 2_000_000);
+        System.out.println(housesCatalog.sortHouseWishMinMax(1_000_000, 2_000_000));
         System.out.println();
-//        housesCatalog.searchByDistrict("СОВетсКИЙ", "киРОВский", "ВахитовсКИЙ");
+        housesCatalog.searchByDistrict("СОВетсКИЙ", "киРОВский", "ВахитовсКИЙ");
     }
 }

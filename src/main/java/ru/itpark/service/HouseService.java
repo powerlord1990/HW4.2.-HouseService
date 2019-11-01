@@ -11,25 +11,27 @@ public class HouseService {
 
     private List<House> sortWishPrice() {
         List<House> houseList = houses;
-        List<House> houseNew =new ArrayList<>(houseList);
+        List<House> houseNew = new ArrayList<>(houseList);
         houseNew.sort(Comparator.comparing(House::getPrice));
         return houseNew;
     }
 
-    public void sortHouseWishMinMax(int min, int max) {
+    public List<House> sortHouseWishMinMax(int min, int max) {
         List<House> sorting = sortWishPrice();
+        List<House> sortWithPrice = new ArrayList<>();
         for (House house : sorting) {
             if (house.getPrice() > min && house.getPrice() < max) {
-                System.out.println(house.toString());
+                sortWithPrice.add(house);
             }
-        }
+        }return sortWithPrice;
     }
+
 
     public List<House> searchByDistrict(String... districts) {
         List<House> result = new ArrayList<>();
         for (House house : houses) {
             for (String district : districts) {
-                if(house.getDistrict().equalsIgnoreCase(district)) {
+                if (house.getDistrict().equalsIgnoreCase(district)) {
                     System.out.println(house.toString());
 
                 }
@@ -37,7 +39,6 @@ public class HouseService {
         }
         return result;
     }
-
 
     public void addHouse(House house) {
         houses.add(house);
