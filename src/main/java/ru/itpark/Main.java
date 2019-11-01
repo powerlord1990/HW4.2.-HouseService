@@ -3,8 +3,6 @@ package ru.itpark;
 import ru.itpark.model.House;
 import ru.itpark.service.HouseService;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
