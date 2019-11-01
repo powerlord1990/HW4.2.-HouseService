@@ -9,14 +9,14 @@ import java.util.List;
 public class HouseService {
     private List<House> houses = new ArrayList<>();
 
-    private List<House> searchWishPrice() {
+    private List<House> sortWishPrice() {
         List<House> houseList = houses;
         houseList.sort(Comparator.comparing(House::getPrice));
         return houseList;
     }
 
     public void sortHouseWishMinMax(int min, int max) {
-        List<House> sorting = searchWishPrice();
+        List<House> sorting = sortWishPrice();
         for (House house : sorting) {
             if (house.getPrice() > min && house.getPrice() < max) {
                 System.out.println(house.toString());
