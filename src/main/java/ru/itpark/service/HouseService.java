@@ -9,15 +9,15 @@ import java.util.List;
 public class HouseService {
     private List<House> houses = new ArrayList<>();
 
-    private List<House> sortWishPrice() {
+    private List<House> sortByPrice() {
         List<House> houseList = houses;
         List<House> houseNew = new ArrayList<>(houseList);
         houseNew.sort(Comparator.comparing(House::getPrice));
         return houseNew;
     }
 
-    public List<House> searhHouseWishMinMax(int min, int max) {
-        List<House> sorting = sortWishPrice();
+    public List<House> searchHouseWishMinMax(int min, int max) {
+        List<House> sorting = sortByPrice();
         List<House> sortWithPrice = new ArrayList<>();
         for (House house : sorting) {
             if (house.getPrice() > min && house.getPrice() < max) {
