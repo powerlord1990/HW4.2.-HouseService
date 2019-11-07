@@ -49,8 +49,8 @@ public class Main {
         housesCatalog.addHouse(house2);
         housesCatalog.addHouse(house3);
         housesCatalog.addHouse(house4);
-        System.out.println(housesCatalog.searchHouseWishMinMax(1_000_000, 2_000_000));
+        System.out.println("Поиск в пределах цены " + housesCatalog.searchHouseWishMinMax(1_000_000, 2_000_000));
         System.out.println();
-        housesCatalog.searchByDistrict("СОВетсКИЙ", "киРОВский", "ВахитовсКИЙ");
+        System.out.println("Поиск по району " + housesCatalog.searchByDistrict("СОВетсКИЙ", "киРОВский", "ВахитовсКИЙ"));
     }
 }

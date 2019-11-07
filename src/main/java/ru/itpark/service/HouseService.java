@@ -29,15 +29,15 @@ public class HouseService {
 
     public List<House> searchByDistrict(String... districts) {
         List<House> result = new ArrayList<>();
+        List<House> serchHouseDistrict=new ArrayList<>();
         for (House house : houses) {
             for (String district : districts) {
                 if (house.getDistrict().equalsIgnoreCase(district)) {
-                    System.out.println(house.toString());
-
+                    serchHouseDistrict.add(house);
                 }
             }
         }
-        return result;
+        return serchHouseDistrict;
     }
 
     public void addHouse(House house) {
