@@ -16,7 +16,7 @@ public class HouseService {
         return houseNew;
     }
 
-    public List<House> sortHouseWishMinMax(int min, int max) {
+    public List<House> searhHouseWishMinMax(int min, int max) {
         List<House> sorting = sortWishPrice();
         List<House> sortWithPrice = new ArrayList<>();
         for (House house : sorting) {
