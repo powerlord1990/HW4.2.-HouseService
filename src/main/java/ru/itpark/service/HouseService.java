@@ -23,21 +23,21 @@ public class HouseService {
             if (house.getPrice() > min && house.getPrice() < max) {
                 sortWithPrice.add(house);
             }
-        }return sortWithPrice;
+        }
+        return sortWithPrice;
     }
 
 
     public List<House> searchByDistrict(String... districts) {
-        List<House> result = new ArrayList<>();
-        List<House> serchHouseDistrict=new ArrayList<>();
+        List<House> searchHouseDistrict = new ArrayList<>();
         for (House house : houses) {
             for (String district : districts) {
                 if (house.getDistrict().equalsIgnoreCase(district)) {
-                    serchHouseDistrict.add(house);
+                    searchHouseDistrict.add(house);
                 }
             }
         }
-        return serchHouseDistrict;
+        return searchHouseDistrict;
     }
 
     public void addHouse(House house) {
