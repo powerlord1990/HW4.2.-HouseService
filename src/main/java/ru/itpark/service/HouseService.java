@@ -9,23 +9,17 @@ import java.util.List;
 public class HouseService {
     private List<House> houses = new ArrayList<>();
 
-    private List<House> sortByPrice() {
-        List<House> houseNew = new ArrayList<>(houses);
-        houseNew.sort(Comparator.comparing(House::getPrice));
-        return houseNew;
-    }
-
     public List<House> searchHouseWishMinMax(int min, int max) {
-        List<House> sorting = sortByPrice();
+        List<House> sorting = new ArrayList<>(houses);
         List<House> sortWithPrice = new ArrayList<>();
         for (House house : sorting) {
             if (house.getPrice() > min && house.getPrice() < max) {
                 sortWithPrice.add(house);
             }
+            sortWithPrice.sort(Comparator.comparing(House::getPrice));
         }
         return sortWithPrice;
     }
-
 
     public List<House> searchByDistrict(String... districts) {
         List<House> searchHouseDistrict = new ArrayList<>();
@@ -34,7 +28,7 @@ public class HouseService {
                 if (house.getDistrict().equalsIgnoreCase(district)) {
                     searchHouseDistrict.add(house);
                 }
-            }
+            }searchHouseDistrict.sort(Comparator.comparing(House::getPrice));
         }
         return searchHouseDistrict;
     }
