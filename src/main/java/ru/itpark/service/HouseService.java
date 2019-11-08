@@ -10,8 +10,7 @@ public class HouseService {
     private List<House> houses = new ArrayList<>();
 
     private List<House> sortByPrice() {
-        List<House> houseList = houses;
-        List<House> houseNew = new ArrayList<>(houseList);
+        List<House> houseNew = new ArrayList<>(houses);
         houseNew.sort(Comparator.comparing(House::getPrice));
         return houseNew;
     }
